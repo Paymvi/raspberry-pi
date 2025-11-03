@@ -3,7 +3,7 @@
 
 ### Connect Hardware
 
-<img src="./img/pi-setup-1.jpg" alt="pi hardware" width="350"/>
+![pi hardware](./img/pi-setup-1.jpg)
 
 To setup the raspberry pi, you need to make sure these are connected:
 - The power cable (USB-C)
@@ -29,7 +29,5 @@ After setting those up, it will ask you to choose whether you want to upgrade to
 - If things go bad, you can switch back to Wayfire using the raspi-config command-line tool
 
 After you choose your settings... you have not finished setting up your raspberry pi!
-
-<img src="./img/pi-setup-3.jpg" alt="pi desktop" width="350"/>
 
 It now looks like a linux desktop computer.
