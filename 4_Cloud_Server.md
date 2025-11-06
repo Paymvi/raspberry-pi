@@ -60,7 +60,7 @@ Alias /nextcloud "/var/www/nextcloud/"
 </IfModule>
 
 ```
-Save (**Ctrl + O --> Ctryl + x**)
+Save (**Ctrl + O --> Ctrl + x**)
 
 **6. Enable it and restart Apache**
 ```
@@ -85,16 +85,16 @@ http://<<Your_ip>>/nextcloud
 **9. Make a database in the terminal.**
 
 Don't be fooled by the GUI. When you do a **manual install zia the web GUI**, the installer does **not create the database itself.**.
-- It only **connects to an existing databse** and creates the necessary tables inside it.
-- That's why you need to create the databse first, along with a **database user** and password
+- It only **connects to an existing database** and creates the necessary tables inside it.
+- That's why you need to create the database first, along with a **database user** and password
 
-(Basically the GUI installer only creates tables inside ht databse, not the database itself)
+(Basically the GUI installer only creates tables inside the database, not the database itself)
 
 **Login into MySQL/MariaDB**
 ```
 sudo sql
 ```
-- This logs you in as the root databse user
+- This logs you in as the root database user
 - You should see a prompt like: MariaDB [(none)]
 ```
 CREATE DATABASE your_database_name;
@@ -126,4 +126,4 @@ EXIT;
 ... Now it should look like this:
 <img src="./img/pi-nextcloud-3.jpg" alt="nextcloud opening screen" width="800"/>
 
-Now just check off how many apps you wnat to install and now you are all set!!!
+Now just check off how many apps you want to install and now you are all set!!!
