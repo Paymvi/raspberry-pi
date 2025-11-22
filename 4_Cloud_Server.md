@@ -1,4 +1,4 @@
-# How to Setup your own cloud server
+# How to Setup your own Cloud Server
 
 This is how you can make your own google drive! 
 - Manual installation style
@@ -111,7 +111,7 @@ Give the user permissions on the database
 GRANT ALL PRIVILEGES ON your_database_name.* TO 'your_username'@'localhost';
 FLUSH PRIVILEGES;
 ```
-- `your_database_name.*` gives permission on all tables in the databse
+- `your_database_name.*` gives permission on all tables in the database
 - `FLUSH PRIVILEGES` applies the changes immediately
 
 ***Test the connection***
