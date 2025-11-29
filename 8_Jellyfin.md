@@ -34,6 +34,7 @@ sudo systemctl start jellyfin
 ```
 http://<PI-IP>:8096
 ```
+<img src="./img/pi-jellyfin-1.jpg" alt="pi screen" width="400"/>  
 
 ## Part 3 - Make a media library for YouTube Videos
 If you haven't already:
@@ -44,8 +45,8 @@ This is how you are going to get the videos from youtube into .mp4 or .webm
 
 Now...
 1. Library type
-Choose "Home Videos & Photos"
-Why not “Movies” or “TV Shows”?
+Choose "Home Videos & Photos"  
+Why not “Movies” or “TV Shows”?  
 - YouTube videos usually don’t match movie databases
 - And they are not in S01E01 format
 Home Videos = perfect category for random videos.
@@ -62,21 +63,26 @@ Mine looks like:
 Anyway, choose the folder and choose "Ok".  
 This tells Jellyfin where to scan for files
 
-4. Check & Uncheck
-This is the optimized setp for minial CPU load, corrrect thumbnails, and not breaking it
-✔️ Enable the library
-❌ Display the photos
-❌ Prefer embedded titles over filenames
-✔️ Enable real-time monitoring
-❌ METADATA SAVERS [uncheck everything]
-✔️ Embedded Image Extractor
-✔️ Screen Grabber
-❌ Save artwork into media folders
-✔️ Enable trickplay image extraction
-❌ Extract trickplay images during the library scan
-❌ Save trickplay images next to media
-❌ Enable chapter image extraction
-❌ Extract chapter images during the library scan
+<br>
+
+<img src="./img/pi-jellyfin-2.jpg" alt="pi screen" width="400"/>  
+<br>
+4. Check & Uncheck  
+This is the optimized setup for minimal CPU load, correct thumbnails, and not breaking it  
+
+✔️ Enable the library  
+❌ Display the photos  
+❌ Prefer embedded titles over filenames  
+✔️ Enable real-time monitoring  
+❌ METADATA SAVERS [uncheck everything]  
+✔️ Embedded Image Extractor  
+✔️ Screen Grabber  
+❌ Save artwork into media folders  
+✔️ Enable trickplay image extraction  
+❌ Extract trickplay images during the library scan  
+❌ Save trickplay images next to media  
+❌ Enable chapter image extraction  
+❌ Extract chapter images during the library scan  
 
 5. Putting the file into the main folder `/mnt/ssd/YouTube`
 What is tricky about this whole process is the permissions.  
@@ -104,8 +110,25 @@ sudo systemctl restart jellyfin
 ```
 Then refresh
 
+## Part 4 - Enable Remote Streaming (Tailscale)
+This is needed so you can watch your Jellyfin away from home
+```
+curl -fsSL https://tailscale.com/install.sh | sh
+sudo tailscale up
+```
+Then Jellyfin URL becomes:
+```
+http://<your-tailscale-ip>:8096
+```
+This allows:
+- secure remote access
+- no port forwarding
+- no DNS
+- accessible anywhere
+Highly recommended.
 
-
+<br>
+<img src="./img/pi-jellyfin-3.jpg" alt="pi screen" width="400"/>  
 
 ## Part ? - Enable Hardware Acceleration (Pi 5 = fast)
 This helps the videos run smoother
